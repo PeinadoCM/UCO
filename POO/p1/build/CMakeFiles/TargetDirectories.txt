@@ -1,3 +1,0 @@
-/home/usuario/POO/Practica1/Ej1/build/CMakeFiles/person-main.dir
-/home/usuario/POO/Practica1/Ej1/build/CMakeFiles/edit_cache.dir
-/home/usuario/POO/Practica1/Ej1/build/CMakeFiles/rebuild_cache.dir
