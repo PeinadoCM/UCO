@@ -1,0 +1,37 @@
+[2024-05-20, 20:17:47] ==> [Servidor]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:17:47] ==> [Servidor]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:17:47] ==> [Servidor]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:17:47] ==> [Servidor]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:20:53] ==> [Servidor]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:20:53] ==> [Servidor]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:20:53] ==> [Servidor]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:20:53] ==> [Servidor]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:21:09] ==> Recibido el mensaje: exit
+[2024-05-20, 20:22:07] ==> [Servidor]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:22:07] ==> [Servidor]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:22:07] ==> [Servidor]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:22:07] ==> [Servidor]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:22:21] ==> Recibido el mensaje: exit
+[2024-05-20, 20:34:05] ==> [Servidor]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:34:05] ==> [Servidor]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:34:05] ==> [Servidor]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:34:05] ==> [Servidor]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:34:13] ==> Recibido el mensaje: Hola
+
+[2024-05-20, 20:34:13] ==> Enviando mensaje: Numero de caracteres recibidos: 4
+[2024-05-20, 20:34:15] ==> Recibido el mensaje: Como estas
+
+[2024-05-20, 20:34:15] ==> Enviando mensaje: Numero de caracteres recibidos: 10
+[2024-05-20, 20:34:20] ==> Recibido el mensaje: exit
+
+[2024-05-23, 19:18:49] ==> [Servidor]: El nombre de la cola es: /server_queue-usuario
+[2024-05-23, 19:18:49] ==> [Servidor]: El nombre de la cola es: /client_queue-usuario
+[2024-05-23, 19:18:49] ==> [Servidor]: El descriptor de la cola del servidor es: 3
+[2024-05-23, 19:18:49] ==> [Servidor]: El descriptor de la cola del cliente es: 4
+[2024-05-23, 19:18:55] ==> Recibido el mensaje: Hola
+
+[2024-05-23, 19:18:55] ==> Enviando mensaje: Numero de caracteres recibidos: 4
+[2024-05-23, 19:18:59] ==> Recibido el mensaje: Como estas?
+
+[2024-05-23, 19:18:59] ==> Enviando mensaje: Numero de caracteres recibidos: 11
+[2024-05-23, 19:19:00] ==> Recibido el mensaje: exit

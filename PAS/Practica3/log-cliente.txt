@@ -1,0 +1,45 @@
+[2024-05-20, 20:17:49] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:17:49] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:17:49] ==> [Cliente]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:17:49] ==> [Cliente]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:18:21] ==> Finalizacion del programa tras recibir la senal 15
+[2024-05-20, 20:18:21] ==> Enviando mensaje: exit
+[2024-05-20, 20:20:56] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:20:56] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:20:56] ==> [Cliente]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:20:56] ==> [Cliente]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:21:09] ==> Finalizacion del programa tras recibir la senal 2
+[2024-05-20, 20:21:09] ==> Enviando mensaje: exit
+[2024-05-20, 20:22:12] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:22:12] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:22:12] ==> [Cliente]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:22:12] ==> [Cliente]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:22:21] ==> Finalizacion del programa tras recibir la senal 2
+[2024-05-20, 20:22:21] ==> Enviando mensaje: exit
+[2024-05-20, 20:34:11] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-20, 20:34:11] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-20, 20:34:11] ==> [Cliente]: El descriptor de la cola del servidor es: 3
+[2024-05-20, 20:34:11] ==> [Cliente]: El descriptor de la cola del cliente es: 4
+[2024-05-20, 20:34:13] ==> Enviando mensaje: Hola
+
+[2024-05-20, 20:34:13] ==> Recibido el mensaje: Numero de caracteres recibidos: 4
+[2024-05-20, 20:34:15] ==> Enviando mensaje: Como estas
+
+[2024-05-20, 20:34:15] ==> Recibido el mensaje: Numero de caracteres recibidos: 10
+[2024-05-20, 20:34:20] ==> Enviando mensaje: exit
+
+[2024-05-23, 19:18:46] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-23, 19:18:46] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-23, 19:18:46] ==> Error al abrir la cola del servidor
+[2024-05-23, 19:18:53] ==> [Cliente]: El nombre de la cola es: /server_queue-usuario
+[2024-05-23, 19:18:53] ==> [Cliente]: El nombre de la cola es: /client_queue-usuario
+[2024-05-23, 19:18:53] ==> [Cliente]: El descriptor de la cola del servidor es: 3
+[2024-05-23, 19:18:53] ==> [Cliente]: El descriptor de la cola del cliente es: 4
+[2024-05-23, 19:18:55] ==> Enviando mensaje: Hola
+
+[2024-05-23, 19:18:55] ==> Recibido el mensaje: Numero de caracteres recibidos: 4
+[2024-05-23, 19:18:59] ==> Enviando mensaje: Como estas?
+
+[2024-05-23, 19:18:59] ==> Recibido el mensaje: Numero de caracteres recibidos: 11
+[2024-05-23, 19:19:00] ==> Finalizacion del programa tras recibir la senal 2
+[2024-05-23, 19:19:00] ==> Enviando mensaje: exit
