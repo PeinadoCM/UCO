@@ -1,0 +1,113 @@
+/* Estilos específicos para user */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #e3f2fd; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 2px solid #1e88e5;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1e88e5; /* Azul oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #1e88e5; /* Azul oscuro */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #bbdefb;
+}
+
+table tr:hover {
+    background-color: #90caf9;
+    transition: background-color 0.3s;
+}
+
+button {
+    background-color: #1e88e5; /* Azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    display: flex; /* Asegura el layout interno */
+    flex-direction: column; /* Organiza elementos en columna */
+    justify-content: center; /* Centra verticalmente el contenido interno */
+    align-items: center; /* Centra horizontalmente el contenido interno */
+}
+
+.hidden{
+    display: none !important;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los botones salten de línea si no hay espacio */
+    gap: 10px; /* Espaciado entre los botones */
+    justify-content: center; /* Centrar horizontalmente los botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.button-group form {
+    margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
