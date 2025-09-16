@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/becas#"
+     xml:base="http://example.org/becas"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://example.org/becas"/>
+
+    <!-- Clases para Atributo, Criterio y Valoracion -->
+    <owl:Class rdf:about="#Atributo"/>
+    <owl:Class rdf:about="#Criterio"/>
+    <owl:Class rdf:about="#Valoracion"/>
+
+    <!-- Propiedades de datos (para Atributos) -->
+    <owl:DatatypeProperty rdf:about="#nombre">
+        <rdfs:domain rdf:resource="#Atributo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#tipo">
+        <rdfs:domain rdf:resource="#Atributo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#posiblesValores">
+        <rdfs:domain rdf:resource="#Atributo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#valorInicial">
+        <rdfs:domain rdf:resource="#Atributo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Propiedades de datos (para Criterios) -->
+    <owl:DatatypeProperty rdf:about="#tipoComparacion">
+        <rdfs:domain rdf:resource="#Criterio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#valor">
+        <rdfs:domain rdf:resource="#Criterio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- Propiedad de conexión entre Criterio y Valoracion -->
+    <owl:ObjectProperty rdf:about="#valoracion">
+        <rdfs:domain rdf:resource="#Criterio"/>
+        <rdfs:range rdf:resource="#Valoracion"/>
+    </owl:ObjectProperty>
+
+    <!-- Instancias de Atributos -->
+    <owl:NamedIndividual rdf:about="#Edad">
+        <rdf:type rdf:resource="#Atributo"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</nombre>
+        <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</tipo>
+        <valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Ingles">
+        <rdf:type rdf:resource="#Atributo"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles</nombre>
+        <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multiple</tipo>
+        <posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</posiblesValores>
+        <posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</posiblesValores>
+        <posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</posiblesValores>
+        <posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</posiblesValores>
+        <posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</posiblesValores>
+        <valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Dinero">
+        <rdf:type rdf:resource="#Atributo"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patrimonio familiar</nombre>
+        <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</tipo>
+        <valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10000</valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Nota">
+        <rdf:type rdf:resource="#Atributo"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nota media</nombre>
+        <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</tipo>
+        <valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Hermanos">
+        <rdf:type rdf:resource="#Atributo"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene hermanos</nombre>
+        <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bool</tipo>
+        <valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</valorInicial>
+    </owl:NamedIndividual>
+
+    <!-- Instancias de Valoraciones -->
+    <owl:NamedIndividual rdf:about="#General">
+        <rdf:type rdf:resource="#Valoracion"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General</nombre>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#MEC">
+        <rdf:type rdf:resource="#Valoracion"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEC</nombre>
+    </owl:NamedIndividual>
+
+    <!-- Instancias de Criterios asociados a las Valoraciones -->
+    <owl:NamedIndividual rdf:about="#CriterioEdad">
+        <rdf:type rdf:resource="#Criterio"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</nombre>
+        <atributo rdf:resource="#Edad"/>
+        <tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</tipoComparacion>
+        <valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16,26</valor>
+        <valoracion rdf:resource="#General"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioNotaMedia">
+        <rdf:type rdf:resource="#Criterio"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nota media[5-7]</nombre>
+        <atributo rdf:resource="#Nota"/>
+        <tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</tipoComparacion>
+        <valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5,7</valor>
+        <valoracion rdf:resource="#General"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioEdadMEC">
+        <rdf:type rdf:resource="#Criterio"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</nombre>
+        <atributo rdf:resource="#Edad"/>
+        <tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</tipoComparacion>
+        <valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16,26</valor>
+        <valoracion rdf:resource="#MEC"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioNotaMediaMEC">
+        <rdf:type rdf:resource="#Criterio"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nota media[5-7]</nombre>
+        <atributo rdf:resource="#Nota"/>
+        <tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</tipoComparacion>
+        <valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5,7</valor>
+        <valoracion rdf:resource="#MEC"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>

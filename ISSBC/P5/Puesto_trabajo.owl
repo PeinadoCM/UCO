@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/puestoTrabajo#"
+     xml:base="http://example.org/puestoTrabajo"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:esq_dom="http://example.org/esq_dom#">
+
+    <owl:Ontology rdf:about="http://example.org/puestoTrabajo">
+        <owl:imports rdf:resource="http://example.org/esq_dom"/>
+    </owl:Ontology>
+
+<!-- Instancias de Valoraciones -->
+    <owl:NamedIndividual rdf:about="#Secretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Valoracion"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secretario</esq_dom:nombre>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Gerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Valoracion"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerente</esq_dom:nombre>
+    </owl:NamedIndividual>
+
+<!-- Instancias de Atributos -->
+    <owl:NamedIndividual rdf:about="#Edad">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Atributo"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</esq_dom:nombre>
+        <esq_dom:tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</esq_dom:tipo>
+        <esq_dom:valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</esq_dom:valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Ingles">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Atributo"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles</esq_dom:nombre>
+        <esq_dom:tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multiple</esq_dom:tipo>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</esq_dom:posiblesValores>
+        <esq_dom:valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</esq_dom:valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Titulacion">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Atributo"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayor titulación académica</esq_dom:nombre>
+        <esq_dom:tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multiple</esq_dom:tipo>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESO</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachiller</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Medio</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Superior</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Universitario</esq_dom:posiblesValores>
+        <esq_dom:posiblesValores rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</esq_dom:posiblesValores>
+        <esq_dom:valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESO</esq_dom:valorInicial>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Experiencia">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Atributo"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Años de experiencia</esq_dom:nombre>
+        <esq_dom:tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</esq_dom:tipo>
+        <esq_dom:valorInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</esq_dom:valorInicial>
+    </owl:NamedIndividual>
+
+<!-- Instancias de Criterios Puesto de Secretario -->
+    <owl:NamedIndividual rdf:about="#CriterioEdadSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Edad"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">año</esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[18,50]</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesNingunoSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles - Ninguno</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesB1Secretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles - B1</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesB2Secretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles - B2</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesC1Secretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles - C1</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesC2Secretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles - C2</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioExperienciaSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiencia laboral</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Experiencia"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">año</esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[3,60]</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionESOSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - ESO</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESO</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionBachillerSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Bachiller</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachiller</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionGradoMedioSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Medio</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Medio</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionGradoSuperiorSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Superior</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Superior</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionUniversitariaSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Universitario</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Universitario</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionMasterSecretario">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Master</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Secretario"/>
+    </owl:NamedIndividual>
+
+
+<!-- Instancias de Criterios Puesto de Gerente -->
+    <owl:NamedIndividual rdf:about="#CriterioEdadGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Edad"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">año</esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[20,48]</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioEdadGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Edad"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">año</esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[20,48]</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesNingunoGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles-Ninguno</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ninguno</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesB1Gerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles-B1</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesB2Gerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles-B2</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesC1Gerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles-C1</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioInglesC2Gerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel de ingles-C2</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Ingles"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioExperienciaGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiencia laboral</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Experiencia"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rango</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">año</esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[5,60]</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+   
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionESOGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - ESO</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESO</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionBachillerGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Bachiller</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachiller</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionGradoMedioGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Medio</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Medio</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionGradoSuperiorGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Superior</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Superior</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionGradoUniversitarioGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Grado Universitario</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grado Universitario</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#CriterioTitulacionMasterGerente">
+        <rdf:type rdf:resource="http://example.org/esq_dom#Criterio"/>
+        <esq_dom:nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulación - Master</esq_dom:nombre>
+        <esq_dom:atributo rdf:resource="#Titulacion"/>
+        <esq_dom:tipoComparacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorica</esq_dom:tipoComparacion>
+        <esq_dom:tipoResultado rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></esq_dom:tipoResultado>
+        <esq_dom:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</esq_dom:puntuacion>
+        <esq_dom:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</esq_dom:valor>
+        <esq_dom:obligatoria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</esq_dom:obligatoria>
+        <esq_dom:valoracion rdf:resource="#Gerente"/>
+    </owl:NamedIndividual>
+
+
+</rdf:RDF>
