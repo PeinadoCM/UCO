@@ -1,0 +1,389 @@
+/* TemaVerde.css */
+/* ===========================
+   RESET Y BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0d1f16; /* verde muy oscuro */
+  color: #e0f2f1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
+.container {
+  background-color: #1b3d2f; /* fondo contenedor verde oscuro */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ===========================
+   ENCABEZADOS
+=========================== */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: #66bb6a; /* verde suave claro */
+  text-align: center;
+}
+
+/* ===========================
+   FORMULARIOS
+=========================== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #a5d6a7;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #2e7d32;
+  border-radius: 6px;
+  background-color: #0f2a1e;
+  color: #e8f5e9;
+  margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+input[type="submit"],
+button {
+  background-color: #388e3c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* ===========================
+   MENSAJES
+=========================== */
+.error,
+p#error,
+p#mensaje {
+  background-color: #4a1f1f;
+  color: #ff8a80;
+  padding: 10px;
+  border: 1px solid #ff5252;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.success {
+  background-color: #1b2e1b;
+  color: #81c784;
+  padding: 10px;
+  border: 1px solid #66bb6a;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   ENLACES
+=========================== */
+a {
+  color: #81c784;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #66bb6a;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 640px) {
+  .container {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* ===========================
+   MENSAJES INDIVIDUALES (CARDS)
+=========================== */
+.mensaje-card {
+  background-color: #e8f5e9;         /* Verde muy claro */
+  border: 1px solid #a5d6a7;         /* Borde verde suave */
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* Sombra más suave */
+  color: #1b5e20;                   /* Texto verde oscuro para contraste */
+}
+
+/* ===========================
+   MENSAJE DE ERROR (POP-UP)
+=========================== */
+.mensaje {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336; /* Rojo por defecto */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1000;
+  opacity: 0.95;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  animation: fadeOut 3s forwards;
+}
+
+.mensaje.exito {
+  background-color: #4CAF50;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 0.95; }
+  80% { opacity: 0.95; }
+  100% { opacity: 0; display: none; }
+}
+
+
+/* ===========================
+   FILAS PARTIDA
+=========================== */
+.fila {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px; /* Espaciado entre filas */
+}
+
+/* ===========================
+   TABLAS
+=========================== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  background-color: #1b3d2f; /* mismo color que el contenedor */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 16px;
+  color: #e0f2f1;
+}
+
+thead {
+  background-color: #388e3c; /* verde botón */
+  color: #e8f5e9;
+  text-align: left;
+}
+
+thead th {
+  padding: 12px 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #2e7d32; /* verde más oscuro */
+}
+
+tbody tr {
+  border-bottom: 1px solid #2e7d32; /* línea verde oscura */
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #2e7d32; /* verde oscuro al pasar el ratón */
+  cursor: pointer;
+  color: #e8f5e9;
+}
+
+tbody td {
+  padding: 12px 15px;
+  color: #c8e6c9;
+}
+
+.ranking-usuario-actual {
+  background-color: #2e7d32 !important; /* verde oscuro para destacar */
+  font-weight: bold;
+  color: #e8f5e9;
+  border-left: 4px solid #81c784; /* línea lateral verde claro */
+}
+
+/* ===========================
+   ESTILOS DEL TUTORIAL - CÓMO JUGAR
+=========================== */
+.tutorial .color-example {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #10281d;
+  border-left: 4px solid #66bb6a;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.tutorial .color-box {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.tutorial .color-box.green {
+  background-color: #43a047;
+}
+
+.tutorial .color-box.yellow {
+  background-color: #fdd835;
+  color: #000;
+}
+
+.tutorial .color-box.gray {
+  background-color: #9e9e9e;
+}
+
+.tutorial .example {
+  background-color: #0f2a1e;
+  border-left: 4px solid #81c784;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  color: #c8e6c9;
+}
+
+.tutorial .example h3 {
+  margin-top: 0;
+  color: #a5d6a7;
+}
+
+.tutorial .example p:last-child {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ===========================
+   BOTÓN PRINCIPAL DE JUEGO
+=========================== */
+.start-button {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #43a047;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #2e7d32;
+}
+
+/* ===========================
+   BOTÓN VOLVER
+=========================== */
+.tutorial form input[type="button"] {
+  background-color: #2e7d32;
+  color: #e0f2f1;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.tutorial form input[type="button"]:hover {
+  background-color: #1b5e20;
+}
+/* ===========================
+   BCOLORES TUTORIAL BOTONES
+=========================== */
+.ejemplo-operacion {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.cuadro {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.cuadro.amarillo {
+  background-color: #fbc02d;
+  color: #000;
+}
+
+.cuadro.verde {
+  background-color: #2e7d32;
+}
+
+.cuadro.gris {
+  background-color: #616161;
+}
+
+/* ===========================
+   IMAGEN DEL INDEX
+=========================== */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 200px; /* Ajusta el tamaño según lo que necesites */
+  height: auto;
+  margin-bottom: 20px;
+}
